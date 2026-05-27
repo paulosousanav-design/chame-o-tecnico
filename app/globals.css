@@ -1,28 +1,39 @@
-@import "tailwindcss" theme(reference);
-
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
+/* Customização completa do Tema Escuro - Sem dependências */
 :root {
   --background: #0f172a;
   --foreground: #f8fafc;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
+html, body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Customização dos campos do formulário para o tema escuro */
+/* Estilização dos blocos e containers */
+.main-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Customização dos campos do formulário */
 input, textarea, select {
+  width: 100%;
   background-color: #1e293b !important;
   color: #f8fafc !important;
   border: 1px solid #334155 !important;
   border-radius: 0.375rem;
   padding: 0.625rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -30,13 +41,19 @@ input:focus, textarea:focus, select:focus {
   border-color: transparent !important;
 }
 
-/* Botão Laranja customizado */
-.btn-primary {
-  background-color: #ea580c;
-  color: #ffffff;
+/* Botão Laranja de Envio */
+button, .btn-primary {
+  width: 100%;
+  background-color: #ea580c !important;
+  color: #ffffff !important;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.2s;
 }
 
-.btn-primary:hover {
-  background-color: #c2410c;
+button:hover, .btn-primary:hover {
+  background-color: #c2410c !important;
 }
